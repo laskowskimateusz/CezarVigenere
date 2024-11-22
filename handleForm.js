@@ -1,6 +1,7 @@
 function useCypher(id, mode) {
   const text = document.getElementById("text" + id).value;
-  const key = document.getElementById("key" + id).value;
+  let key = document.getElementById("key" + id).value;
+  if (id.startsWith("1")) key = parseInt(key);
   if (!text || !key) {
     alert("Wypełnij poprawnie tekst i wpisz klucz.");
     return;
