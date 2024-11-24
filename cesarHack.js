@@ -68,8 +68,6 @@ function crackCaesarCipher(ciphertext, topResults = 10) {
     results.push({ shift, decryptedText, similarity });
   }
 
-  console..log(results)
-
   return results
     .sort((a, b) => a.similarity - b.similarity)
     .slice(0, topResults);
